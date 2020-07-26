@@ -1,0 +1,16 @@
+// see: https://github.com/Izhaki/mono.ts/blob/master/packages/tsconfig.build.json
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "moduleResolution": "node"
+  },
+  "files": [], // empty files so we never build this folder by mistake
+  "references": [ // packages that need building
+    {"path": "core/tsconfig.build.json"},
+    {"path": "express/tsconfig.build.json"}
+  ]
+}

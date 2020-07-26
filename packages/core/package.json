@@ -1,0 +1,33 @@
+{
+  "name": "@typed-path/core",
+  "version": "0.0.6",
+  "description": "Core implementation of typed-path, for use with combining with other packages.",
+  "keywords": [
+    "routing",
+    "intellisense",
+    "typed",
+    "express"
+  ],
+  "author": "SirJosh3917 <SirJosh3917@users.noreply.github.com>",
+  "homepage": "https://github.com/SirJosh3917/typed-path",
+  "license": "MIT",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirJosh3917/typed-path.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SirJosh3917/typed-path/issues"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.0.0",
+    "typescript": "^3.9.7"
+  }
+}

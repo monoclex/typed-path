@@ -1,0 +1,11 @@
+// dev tsconfig
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@typed-path/core": ["core/src/index.ts"],
+      "@typed-path/express": ["express/src/index.ts"]
+    }
+  }
+}

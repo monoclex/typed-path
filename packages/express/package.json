@@ -1,0 +1,35 @@
+{
+  "name": "@typed-path/express",
+  "version": "0.0.6",
+  "description": "ExpressJS integrations with typed-path.",
+  "keywords": [
+    "express",
+    "routing",
+    "intellisense",
+    "typed"
+  ],
+  "author": "SirJosh3917 <SirJosh3917@users.noreply.github.com>",
+  "homepage": "https://github.com/SirJosh3917/typed-path",
+  "license": "MIT",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirJosh3917/typed-path.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/SirJosh3917/typed-path/issues"
+  },
+  "dependencies": {
+    "@typed-path/core": "^0.0.0"
+  }
+}
