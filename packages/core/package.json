@@ -1,6 +1,6 @@
 {
   "name": "@typed-path/core",
-  "version": "0.0.6",
+  "version": "0.0.0",
   "description": "Core implementation of typed-path, for use with combining with other packages.",
   "keywords": [
     "routing",
