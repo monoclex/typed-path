@@ -3,14 +3,6 @@ import { RequestHandler } from 'express';
 
 type ExtractRouteParamGeneric<Type> = Type extends RoutePartType<infer X> ? X : never
 
-type TupleFour<A, B, C, D> = [A?, B?, C?, D?];
-
-type Total = { "?": [{a: string}, {b: number}, {c: boolean}] }
-type Tuple = Total["?"];
-type TupleFr = TupleFour<{a: string}, {b: number}, {c: boolean}, never>;
-type All = TupleFr[0] & TupleFr[1] & TupleFr[2] & TupleFr[3];
-type Map = { [K in keyof All]: All[K] };
-
 export type TypedRouteAsParams<
 T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19,
 

@@ -79,7 +79,7 @@ A10 extends RouteOrQueryParam<T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, 
 }
 
 export interface RoutePartType<T> {
-  verify(input: any): T | undefined;
+  verify(input: unknown): T | undefined;
 }
 
 export const string: RoutePartType<string> = {
@@ -105,5 +105,3 @@ export const number: RoutePartType<number> = {
     return undefined;
   }
 };
-
-// let k = path`/uhh/${{what: string}}/ok?${{"?": [{name: string}, {birthday: number}]}}`;
