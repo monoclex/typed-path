@@ -41,7 +41,7 @@ export interface QueryParam<
   A1 extends RouteParam<T1>, A2 extends RouteParam<T2>, A3 extends RouteParam<T3>, A4 extends RouteParam<T4>, A5 extends RouteParam<T5>,
   A6 extends RouteParam<T6>, A7 extends RouteParam<T7>, A8 extends RouteParam<T8>, A9 extends RouteParam<T9>, A10 extends RouteParam<T10>,
 > {
-  "?"?: [A1?, A2?, A3?, A4?, A5?, A6?, A7?, A8?, A9?, A10?];
+  "?": [A1?, A2?, A3?, A4?, A5?, A6?, A7?, A8?, A9?, A10?];
 }
 
 export function path<
