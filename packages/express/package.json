@@ -1,6 +1,6 @@
 {
   "name": "@typed-path/express",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "ExpressJS integrations with typed-path.",
   "keywords": [
     "express",
@@ -30,7 +30,7 @@
     "url": "https://github.com/SirJosh3917/typed-path/issues"
   },
   "dependencies": {
-    "@typed-path/core": "^0.0.0",
+    "@typed-path/core": "^0.1.0",
     "@types/express": "^4.17.7"
   }
 }
