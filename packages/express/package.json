@@ -32,5 +32,6 @@
   "dependencies": {
     "@typed-path/core": "^0.1.1",
     "@types/express": "^4.17.7"
-  }
+  },
+  "gitHead": "6dd6eaa4e45e42a8b59167a89ffe444ea36f93b5"
 }
