@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/*"
+    "packages/core",
+    "packages/express"
   ],
   "version": "0.1.0",
   "npmClient": "yarn"
