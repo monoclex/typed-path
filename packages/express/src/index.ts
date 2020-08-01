@@ -1,29 +1,29 @@
-import { path, QueryParam, RouteOrQueryParam, RouteParam, RoutePartType, string, TypedRoute } from '@typed-path/core';
+import { QueryParam, RouteOrQueryParam, RouteParam, RoutePartType, TypedRoute } from '@typed-path/core';
 import { RequestHandler } from 'express';
 
 type ExtractRouteParamGeneric<Type> = Type extends RoutePartType<infer X> ? X : never
 
 export type TypedRouteAsParams<
-T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19,
+  T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19,
 
-Q1 extends RouteParam<T1>, Q2 extends RouteParam<T2>, Q3 extends RouteParam<T3>, Q4 extends RouteParam<T4>, Q5 extends RouteParam<T5>,
-Q6 extends RouteParam<T6>, Q7 extends RouteParam<T7>, Q8 extends RouteParam<T8>, Q9 extends RouteParam<T9>, Q10 extends RouteParam<T10>,
-Q11 extends RouteParam<T11>, Q12 extends RouteParam<T12>, Q13 extends RouteParam<T13>, Q14 extends RouteParam<T14>,
-Q15 extends RouteParam<T15>, Q16 extends RouteParam<T16>, Q17 extends RouteParam<T17>, Q18 extends RouteParam<T18>,
-Q19 extends RouteParam<T19>,
+  Q1 extends RouteParam<T1>, Q2 extends RouteParam<T2>, Q3 extends RouteParam<T3>, Q4 extends RouteParam<T4>, Q5 extends RouteParam<T5>,
+  Q6 extends RouteParam<T6>, Q7 extends RouteParam<T7>, Q8 extends RouteParam<T8>, Q9 extends RouteParam<T9>, Q10 extends RouteParam<T10>,
+  Q11 extends RouteParam<T11>, Q12 extends RouteParam<T12>, Q13 extends RouteParam<T13>, Q14 extends RouteParam<T14>,
+  Q15 extends RouteParam<T15>, Q16 extends RouteParam<T16>, Q17 extends RouteParam<T17>, Q18 extends RouteParam<T18>,
+  Q19 extends RouteParam<T19>,
 
-A1 extends RouteOrQueryParam<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10>,
-A2 extends RouteOrQueryParam<T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11>,
-A3 extends RouteOrQueryParam<T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12>,
-A4 extends RouteOrQueryParam<T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13>,
-A5 extends RouteOrQueryParam<T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14>,
-A6 extends RouteOrQueryParam<T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15>,
-A7 extends RouteOrQueryParam<T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16>,
-A8 extends RouteOrQueryParam<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17>,
-A9 extends RouteOrQueryParam<T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18>,
-A10 extends RouteOrQueryParam<T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19>,
+  A1 extends RouteOrQueryParam<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10>,
+  A2 extends RouteOrQueryParam<T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11>,
+  A3 extends RouteOrQueryParam<T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12>,
+  A4 extends RouteOrQueryParam<T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13>,
+  A5 extends RouteOrQueryParam<T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14>,
+  A6 extends RouteOrQueryParam<T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15>,
+  A7 extends RouteOrQueryParam<T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16>,
+  A8 extends RouteOrQueryParam<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17>,
+  A9 extends RouteOrQueryParam<T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18>,
+  A10 extends RouteOrQueryParam<T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19>,
 > =
-  { [K in keyof Omit<A1, "?">]: ExtractRouteParamGeneric<A1[K]> }
+  & { [K in keyof Omit<A1, "?">]: ExtractRouteParamGeneric<A1[K]> }
   & { [K in keyof Omit<A2, "?">]: ExtractRouteParamGeneric<A2[K]> }
   & { [K in keyof Omit<A3, "?">]: ExtractRouteParamGeneric<A3[K]> }
   & { [K in keyof Omit<A4, "?">]: ExtractRouteParamGeneric<A4[K]> }
@@ -55,37 +55,37 @@ export type TakeQueryFields<
 ) : unknown;
 
 export type TypedRouteAsQuery<
-T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19,
+  T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19,
 
-Q1 extends RouteParam<T1>, Q2 extends RouteParam<T2>, Q3 extends RouteParam<T3>, Q4 extends RouteParam<T4>, Q5 extends RouteParam<T5>,
-Q6 extends RouteParam<T6>, Q7 extends RouteParam<T7>, Q8 extends RouteParam<T8>, Q9 extends RouteParam<T9>, Q10 extends RouteParam<T10>,
-Q11 extends RouteParam<T11>, Q12 extends RouteParam<T12>, Q13 extends RouteParam<T13>, Q14 extends RouteParam<T14>,
-Q15 extends RouteParam<T15>, Q16 extends RouteParam<T16>, Q17 extends RouteParam<T17>, Q18 extends RouteParam<T18>,
-Q19 extends RouteParam<T19>,
+  Q1 extends RouteParam<T1>, Q2 extends RouteParam<T2>, Q3 extends RouteParam<T3>, Q4 extends RouteParam<T4>, Q5 extends RouteParam<T5>,
+  Q6 extends RouteParam<T6>, Q7 extends RouteParam<T7>, Q8 extends RouteParam<T8>, Q9 extends RouteParam<T9>, Q10 extends RouteParam<T10>,
+  Q11 extends RouteParam<T11>, Q12 extends RouteParam<T12>, Q13 extends RouteParam<T13>, Q14 extends RouteParam<T14>,
+  Q15 extends RouteParam<T15>, Q16 extends RouteParam<T16>, Q17 extends RouteParam<T17>, Q18 extends RouteParam<T18>,
+  Q19 extends RouteParam<T19>,
 
-A1 extends RouteOrQueryParam<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10>,
-A2 extends RouteOrQueryParam<T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11>,
-A3 extends RouteOrQueryParam<T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12>,
-A4 extends RouteOrQueryParam<T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13>,
-A5 extends RouteOrQueryParam<T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14>,
-A6 extends RouteOrQueryParam<T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15>,
-A7 extends RouteOrQueryParam<T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16>,
-A8 extends RouteOrQueryParam<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17>,
-A9 extends RouteOrQueryParam<T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18>,
-A10 extends RouteOrQueryParam<T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19>,
+  A1 extends RouteOrQueryParam<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10>,
+  A2 extends RouteOrQueryParam<T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11>,
+  A3 extends RouteOrQueryParam<T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12>,
+  A4 extends RouteOrQueryParam<T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13>,
+  A5 extends RouteOrQueryParam<T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14>,
+  A6 extends RouteOrQueryParam<T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15>,
+  A7 extends RouteOrQueryParam<T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16>,
+  A8 extends RouteOrQueryParam<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17>,
+  A9 extends RouteOrQueryParam<T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18>,
+  A10 extends RouteOrQueryParam<T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19>,
 > =
-& TakeQueryFields<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, A1>
-& TakeQueryFields<T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, A2>
-& TakeQueryFields<T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, A3>
-& TakeQueryFields<T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, A4>
-& TakeQueryFields<T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, A5>
-& TakeQueryFields<T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, A6>
-& TakeQueryFields<T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, A7>
-& TakeQueryFields<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, A8>
-& TakeQueryFields<T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, A9>
-& TakeQueryFields<T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, A10>;
+  & TakeQueryFields<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, A1>
+  & TakeQueryFields<T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, A2>
+  & TakeQueryFields<T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, A3>
+  & TakeQueryFields<T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, A4>
+  & TakeQueryFields<T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, A5>
+  & TakeQueryFields<T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, A6>
+  & TakeQueryFields<T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, A7>
+  & TakeQueryFields<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, A8>
+  & TakeQueryFields<T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, A9>
+  & TakeQueryFields<T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, A10>;
 
-export function get<
+const makeRoute = (name: string) => <
 T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19,
 
 Q1 extends RouteParam<T1>, Q2 extends RouteParam<T2>, Q3 extends RouteParam<T3>, Q4 extends RouteParam<T4>, Q5 extends RouteParam<T5>,
@@ -128,15 +128,15 @@ ResBody = any, ReqBody = any,
       A1, A2, A3, A4, A5, A6, A7, A8, A9, A10
     >
   >[]
-): void;
+): void => {
+  return app[name](path, ...handlers);
+};
 
-export function get(app: import('express').Application, ...args: unknown[]): void {
-  //@ts-ignore
-  app.get(...args);
-}
-
-function what(app: Express.Application) {
-  get(app, path`/here/${{today: string}}?${{"?": [{cool: string}]}})`, (req, res) => {
-    
-  });
-}
+export const all = makeRoute("all");
+export const get = makeRoute("get");
+export const post = makeRoute("post");
+export const put = makeRoute("put");
+export const $delete = makeRoute("delete");
+export const path = makeRoute("path");
+export const options = makeRoute("options");
+export const head = makeRoute("head");
