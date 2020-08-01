@@ -24,7 +24,8 @@
     "url": "git+https://github.com/SirJosh3917/typed-path.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "tsc --project ./tsconfig.build.json"
   },
   "bugs": {
     "url": "https://github.com/SirJosh3917/typed-path/issues"
@@ -36,5 +37,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "44bb41a0eddd06994a3860737614d9877793f5f7"
+  "gitHead": "44bb41a0eddd06994a3860737614d9877793f5f7",
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  }
 }

@@ -1,6 +1,11 @@
 {
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "build": "tsc --build packages/tsconfig.build.json"
   },
   "name": "typed-path"
 }

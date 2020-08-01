@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@typed-path/core@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@typed-path/core/-/core-0.1.1.tgz#b5e0f0d30f9495def7b27744d15059f804fe1360"
+  integrity sha512-hvSl6wP9VHWV6vbCkyFTw6nuDfNHutpQ87/tOriASzlBfaxnxxPUI9wQf+ZQddGeZPkSMoCQWzttq5VCg9RVwA==
+
 "@types/body-parser@*":
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.19.0.tgz#0685b3c47eb3006ffed117cdd55164b61f80538f"
@@ -63,3 +68,8 @@
   dependencies:
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
+
+typescript@^3.9.7:
+  version "3.9.7"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
+  integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
